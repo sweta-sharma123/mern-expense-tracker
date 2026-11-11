@@ -1,99 +1,55 @@
-# Personal Expense Tracker (MERN)
+# MERN Expense Tracker
 
-A beginner-friendly MERN project with one role (`user`) and multiple separate user accounts.
+This is a personal expense tracking web application developed using the MERN Stack.
 
 ## Features
-- Register and login with JWT authentication
-- Dashboard: total income, total expenses, and balance
-- Add, view, edit, and delete income/expense transactions
-- Search transactions by title
-- Filter by type and category
-- Simple monthly summary
-- Each user can access only their own transactions
 
-## Requirements
-- Node.js and npm
-- MongoDB server running locally OR a MongoDB Atlas connection string
+- User Registration and Login
+- JWT (JSON Web Token) Authentication
+- Protected Routes
+- Add Income and Expense Transactions
+- View All Transactions
+- Edit and Delete Transactions
+- Search Transactions by Title
+- Filter Transactions by Income and Expense
+- Dashboard showing Total Income, Total Expense and Remaining Balance
+- User-wise Transaction Management
 
-## 1. Backend setup
-Open a terminal in the `backend` folder:
+## Technologies Used
 
-```bash
-npm install
-```
+- **Frontend:** React.js, JavaScript, CSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Authentication:** JWT
+- **API Communication:** Axios
 
-Copy `.env.example` to `.env` and update values if needed:
+## How to Run the Project
 
-```env
-PORT=5000
-MONGO_URI=mongodb://127.0.0.1:27017/expense_tracker
-JWT_SECRET=change_this_to_a_long_random_secret
-```
+### Backend Setup
 
-Start backend:
+1. Open the backend folder.
+2. Run `npm install`.
+3. Create a `.env` file using `.env.example`.
+4. Configure MongoDB connection and JWT secret.
+5. Run `npm run dev`.
 
-```bash
-npm run dev
-```
+### Frontend Setup
 
-Backend runs at `http://localhost:5000`.
+1. Open the frontend folder.
+2. Run `npm install`.
+3. Create a `.env` file using `.env.example`.
+4. Run `npm run dev`.
 
-## 2. Frontend setup
-Open another terminal in the `frontend` folder:
+## Testing
 
-```bash
-npm install
-```
+- Tested user registration and login.
+- Checked JWT authentication and protected routes.
+- Tested adding income and expense transactions.
+- Checked dashboard total income, total expense and balance.
+- Tested editing and deleting transactions.
+- Checked search and filter options.
+- Tested transaction management with different user accounts.
 
-Copy `.env.example` to `.env`:
+## Project Purpose
 
-```env
-VITE_API_URL=http://localhost:5000/api
-```
-
-Start frontend:
-
-```bash
-npm run dev
-```
-
-Open the URL shown by Vite, usually `http://localhost:5173`.
-
-## 3. Test the project
-1. Register a new account.
-2. Login with that account.
-3. Add an income transaction, for example Salary / 25000.
-4. Add an expense transaction, for example Food / 1500.
-5. Check the dashboard totals.
-6. Edit and delete a transaction.
-7. Register a second account in another browser/incognito window. Its transactions should be separate.
-
-## Project structure
-```text
-backend/
-  config/db.js
-  controllers/authController.js
-  controllers/transactionController.js
-  middleware/auth.js
-  models/User.js
-  models/Transaction.js
-  routes/authRoutes.js
-  routes/transactionRoutes.js
-  server.js
-frontend/
-  src/components/ProtectedRoute.jsx
-  src/context/AuthContext.jsx
-  src/pages/Login.jsx
-  src/pages/Register.jsx
-  src/pages/Dashboard.jsx
-  src/pages/Transactions.jsx
-  src/services/api.js
-  src/App.jsx
-  src/main.jsx
-  src/style.css
-```
-
-## Notes
-- This is a learning project, not a production financial application.
-- JWT is stored in localStorage to keep the learning flow simple. Production apps should use stronger security practices.
-- Never upload your `.env` file or real secrets to GitHub.
+The purpose of this application is to help users manage their personal income and expenses and track their remaining balance.
